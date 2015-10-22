@@ -1,6 +1,6 @@
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+$(call inherit-product, vendor/cm/config/common.mk)
 
 # Inherit device configuration.
 $(call inherit-product, device/dns/s4503_t/s4503.mk)

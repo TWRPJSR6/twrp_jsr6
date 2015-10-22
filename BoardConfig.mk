@@ -48,12 +48,14 @@ BOARD_DATA_DEVICE := /dev/block/mmcblk0p13
 BOARD_DATA_FILESYSTEM := ext4
 BOARD_DATA_FILESYSTEM_OPTIONS := rw
 
+MALLOC_IMPL := dlmalloc
+
 # Kernel
 TARGET_PREBUILT_KERNEL := device/dns/s4503_t/kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom loglevel=1 vmalloc=200M
 
 # USB Mounting
-BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
+BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun1/file"
 
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
@@ -65,16 +67,16 @@ BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_USES_MMCUTILS := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 DEVICE_RESOLUTION := 540x960
-TW_INTERNAL_STORAGE_PATH := "/sdcard1"
-TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard1"
+# TW_INTERNAL_STORAGE_PATH := "/sdcard1"
+# TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard1"
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_FLASH_FROM_STORAGE := true 
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun1/file
 BOARD_USE_CUSTOM_RECOVERY_FONT:= \"roboto_10x18.h\"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_MAX_BRIGHTNESS := 255
+TW_MAX_BRIGHTNESS := 230
 #TW_BOARD_CUSTOM_GRAPHICS := ../../../device/dns/s4503_t/recovery/graphics.c
 
